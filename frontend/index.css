@@ -35,12 +35,6 @@ header .container ul a {
   color: white;
 }
 
-.post-card form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .post-card {
   max-width: 1100px;
   margin: 10px auto;
@@ -48,6 +42,9 @@ header .container ul a {
   background-color: #5885e7;
   color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #post {
