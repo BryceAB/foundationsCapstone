@@ -10,7 +10,7 @@ const getAllPosts = () =>
 const createPost = (body) =>
   axios
     .post(`https://socialmedyadb.herokuapp.com/posts`, body)
-    .then(postsCallback)
+    .then((res) => console.log(res.data))
     .catch(errCallback);
 const deletePost = (id) =>
   axios.delete(`${baseURL}/posts/${id}`).then(postsCallback).catch(errCallback);
