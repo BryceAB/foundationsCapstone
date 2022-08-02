@@ -48,7 +48,7 @@ function toggleHide(id) {
   idPostBtn.classList.toggle("hide");
 }
 
-function editPost(id) {
+async function editPost(id) {
   const idInput = document.getElementById(`${id}-input`);
 
   let bodyObj = {
@@ -56,7 +56,7 @@ function editPost(id) {
     post_id: id,
   };
 
-  updatePost(id, bodyObj);
+  await updatePost(id, bodyObj);
   getAllPosts();
 }
 
