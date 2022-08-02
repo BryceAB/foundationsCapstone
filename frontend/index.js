@@ -1,5 +1,4 @@
 const postsContainer = document.querySelector("#posts-container");
-const postBtn = document.querySelector("#post-btn");
 
 const baseURL = `https://socialmedyadb.herokuapp.com`;
 
@@ -21,8 +20,7 @@ const updatePost = (id, postObj) =>
     .then(postsCallback)
     .catch(errCallback);
 
-function submitHandler(e) {
-  e.preventDefault();
+function submitHandler() {
   let username = document.getElementById("username");
   let post = document.getElementById("post");
 
@@ -37,8 +35,6 @@ function submitHandler(e) {
   post.value = "";
   getAllPosts();
 }
-
-postBtn.addEventListener("submit", submitHandler);
 
 function toggleHide(id) {
   const idPost = document.getElementById(`${id}-post`);
