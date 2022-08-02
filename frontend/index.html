@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css" />
+    <title>SocialMedya</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <h1>SocialMedya</h1>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="post-card">
+          <form id="form1">
+            <div>
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username" />
+            </div>
+            <div>
+              <label for="post">Post</label>
+              <input type="text" name="post" id="post" />
+            </div>
+            <div>
+              <button id="post-btn" onclick="submitHandler()">Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <section>
+      <div class="container">
+        <div id="posts-container"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <h2>Copyright&copy; 2020 Bryce Billingsley</h2>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js"></script>
+  </body>
+</html>
