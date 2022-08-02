@@ -1,18 +1,21 @@
 const postsContainer = document.querySelector("#posts-container");
 
-const baseURL = `https://socialmedyadb.herokuapp.com/posts`;
+const baseURL = `https://socialmedyadb.herokuapp.com`;
 
 const postsCallback = (arr) => displayPosts(arr.data);
 const errCallback = (err) => console.log(err);
 
 const getAllPosts = () =>
-  axios.get(baseURL).then(postsCallback).catch(errCallback);
+  axios.get(`${baseURL}/posts`).then(postsCallback).catch(errCallback);
 const createPost = (body) =>
-  axios.post(baseURL, body).then(postsCallback).catch(errCallback);
+  axios.post(`${baseURL}/posts`, body).then(postsCallback).catch(errCallback);
 const deletePost = (id) =>
-  axios.delete(`${baseURL}/${id}`).then(postsCallback).catch(errCallback);
+  axios.delete(`${baseURL}/posts/${id}`).then(postsCallback).catch(errCallback);
 const updatePost = (id, postObj) =>
-  axios.put(`${baseURL}/${id}`, postObj).then(postsCallback).catch(errCallback);
+  axios
+    .put(`${baseURL}/posts/${id}`, postObj)
+    .then(postsCallback)
+    .catch(errCallback);
 
 function submitHandler() {
   let username = document.getElementById("username");
