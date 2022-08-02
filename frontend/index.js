@@ -1,6 +1,6 @@
 const postsContainer = document.querySelector("#posts-container");
 
-const baseURL = `http://localhost:4005/posts`;
+const baseURL = `https://socialmedyadb.herokuapp.com/posts`;
 
 const postsCallback = (arr) => displayPosts(arr.data);
 const errCallback = (err) => console.log(err);
