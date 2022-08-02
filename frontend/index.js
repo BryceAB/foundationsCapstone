@@ -17,7 +17,8 @@ const updatePost = (id, postObj) =>
     .then(postsCallback)
     .catch(errCallback);
 
-function submitHandler() {
+function submitHandler(e) {
+  e.preventDefault();
   let username = document.getElementById("username");
   let post = document.getElementById("post");
 
